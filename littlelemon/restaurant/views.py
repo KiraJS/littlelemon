@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import generics
 from .models import Menu, Booking
@@ -15,3 +14,11 @@ class MenuItemsView(generics.ListCreateAPIView):
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
+
+class BookingItemsView(generics.ListCreateAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+    
+class SingleBookingItemView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
