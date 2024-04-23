@@ -6,8 +6,8 @@ class Booking(models.Model):
     no_of_guests = models.IntegerField()
     booking_date = models.DateField()
 
-    def __str__(self): 
-        return self.name
+    def __str__(self):
+      return f'{self.name} : {str(self.booking_date)}'
 
 
 class Menu(models.Model):

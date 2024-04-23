@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 DJOSER={"USER_ID_FIELD":"username"}
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
